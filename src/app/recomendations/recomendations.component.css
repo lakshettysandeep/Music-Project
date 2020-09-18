@@ -1,0 +1,50 @@
+.bcontent {
+  margin-top: 10px;
+}
+.text-card-head {
+  font-size: 1rem;
+  font-family: 'Solway', serif;
+}
+.text-card-title {
+  font-size: 1rem;
+  font-family:'Comfoorta-Bold';
+}
+.text-card-text,
+.card-button-text {
+  font-size: 0.9rem;
+  color: #403e3e;
+  font-family: "Comfoorta-Light";
+}
+.card-button-text {
+  color: #ffffff;
+}
+.btn-card {
+  background-color: crimson;
+  border-color: crimson;
+  font-size: 0.8rem;
+}
+.btn-card:hover {
+  color: #fff;
+  background-color: crimson;
+  border-color: crimson;
+  text-decoration: none;
+}
+
+  .listeners-color{
+    color:crimson;
+  }
+
+  .btn-color{
+    background-color: crimson;
+  }
+
+  .details{
+    margin-top: 100px;
+    color:white;
+    font-family:'Comfoorta-Bold'
+}
+
+.subheading{
+  color:crimson;
+}
+  

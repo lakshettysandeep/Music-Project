@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="details">
+      <h1>Need to know Country Special Tracks ?</h1>
+      <p>Browse your Country and listen...</p>
+      </div>
+      <form  style="margin-top: 30px">
+          <div class="form-group">
+              <input type="text" class="form-control" [(ngModel)]= "query" placeholder="Search Country Special...."
+              style="margin-bottom: 10px; margin-top: 10px;color:#000" name="search" id="search">
+              
+              <button class="btn btn-outline-danger" (click)=" getcountryspcl()"><i class="fas fa-search"style="color: #000"></i>Search</button>
+          </div>
+      </form>
+
+    <div *ngIf="condition">
+
+      
+      <div *ngIf="tracks">
+        
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-4 mb-3" *ngFor="let a of tracks">
+          <br>
+          <div class="card">
+            <div class="row no-gutters">
+                <div class="col-sm-5">
+                    <img src="{{a.image[3]['#text']}}" class="card-img" height="200" />
+                </div>
+                <div class="col-sm-7 text-left">
+                 <div class="card-body">
+                    <h5 class="text-card-head">Name : <Strong>{{a.name}}</Strong></h5>
+                    <p class="text-card-text my-2">
+                     <span class="text-card-title">Listeners : </span><span class="listeners-color">{{a.listeners}}</span>
+                    </p>
+                   
+                  <a class="stretched-link btn btn-danger btn-sm card-button-text btn-card" href="{{a.url}}">To Get More Info
+                    <i class="fas fa-angle-double-right"></i>
+                  </a>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="condition">
+  <div class="no-result" *ngIf ="tracks.length == 0">
+    <h1>No Results Found</h1>
+    <h3>Try with other Country</h3>
+  </div>
+</div>

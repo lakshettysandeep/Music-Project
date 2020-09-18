@@ -1,0 +1,78 @@
+
+<div class="container">
+    <div class="header">
+        <h1>Need to know about Artist?</h1>
+        <h3>Browse here to know........</h3>
+    </div>
+    <form  style="margin-top: 50px">
+        <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]= "query" placeholder="Search Artist Details.."
+            style="margin-bottom: 10px; margin-top: 10px;color:#000" name="search" id="search">
+            <button class="btn btn-outline-danger" (click)=" searchartist()"><i class="fas fa-search"style="color: #000">
+            </i>Search</button>
+        </div>
+    </form>
+
+
+    
+
+<div *ngIf="searchres">
+
+ <!--Artist Details-->
+    <div class="box">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-128x128">
+              <a href="{{ artist.url }}" target="_blank"><img src="{{ artist.image }}" alt="artistImage"></a>
+            </figure>
+          </div>
+          <div class="media-content is-clipped">
+            <div class="content">
+              <a class="has-text-success" href="{{ artist.url }}" target="_blank"><strong>{{ artist.name }}</strong></a>
+                <br> <div innerHTML="{{ artist.summary }}"></div>
+            </div>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <div class="level-item">
+                  <div class="tags has-addons">
+                    <span class="tag is-dark">Listeners : </span>
+                    <span class="tag is-info">{{ artist.listeners | number }}</span>
+                  </div>
+                </div>
+                <div class="level-item">
+                  <div class="tags has-addons">
+                    <span class="tag is-dark">Playcount : </span>
+                    <span class="tag is-info"> {{ artist.playcount | number }}</span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </article>
+      </div>
+    
+    <br><br>
+
+<!--Top Tracks-->
+    <h1 class="title has-text-centered">Top 5 Tracks</h1>
+    <div *ngFor="let track of tracks">
+        <nav class="panel">
+          <div class="panel-block">
+                <div class="column is-8">
+                <p class="title is-4 has-text-info"><a href="{{ track.url }}" target="_blank">{{ track.name }}</a></p>
+                </div>
+                <div class="column rank">
+                <p class="subtitle has-white-text has-text-centered">Rank <br><span class="tag is-light">{{ track.rank }}</span></p>
+                </div>
+                <div class="column list">
+                <p class="subtitle has-white-text has-text-centered">Listeners <br><span class="tag is-info">{{ track.listeners | number }}</span></p>
+                </div>
+          </div>
+        </nav>
+    </div>
+    
+</div>
+</div>
+   
+
+ 

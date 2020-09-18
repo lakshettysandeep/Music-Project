@@ -1,0 +1,59 @@
+
+<div class="container">
+  <div class="details">
+    <h1>Need to know about Artist?</h1>
+    <p>Browse your favorite artist and their Info....</p>
+    </div>
+    <form  style="margin-top: 30px">
+        <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]= "query" placeholder="Search Artist..."
+            style="margin-bottom: 10px; margin-top: 10px;color:#000" name="search" id="search">
+            <button class="btn btn-outline-danger" (click)=" searchartist()"><i class="fas fa-search"style="color: #000">
+            </i>Search</button>
+        </div>
+    </form>
+
+    <div class="row">
+      <div  *ngFor="let a of objectofartistmatches">
+        <div class="col-md-4 col-sm-6" *ngFor="let b of a.artist">
+          <br>
+          <div class="card">
+            <div class="row no-gutters">
+                <div class="col-sm-3">
+                    <img src="{{b.image[2]['#text']}}" class="card-img" height="200" width="200" />
+                </div>
+                <div class="col-sm-7 text-left">
+                  <div class="card-body">
+                      <h5 class="text-card-head">Name : <Strong>{{b.name}}</Strong></h5>
+                      <p class="text-card-text my-2">
+                      <span class="text-card-title">Listeners : </span><span class="listeners-color"><Strong>{{b.listeners}}</Strong></span>
+                      </p>
+                      <a class="stretched-link btn btn-danger btn-sm card-button-text btn-card" href="{{b.url}}">To Get More Info
+                        <i class="fas fa-angle-double-right"></i>
+                      </a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+ <!--   <div class= "row">
+      <div  *ngFor="let a of objectofartistmatches">
+          <div class="col-md-4 col-sm-6" *ngFor="let b of a.artist">
+                  <div class="card spacing" style="width: 18rem;">
+                    <img class="card-img-top" src="{{b.image[2]['#text']}}" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Name : {{b.name}}</h5>
+                          <p class="card-text">&emsp;&emsp;<span class="listeners">Listeners </span><em class="count">{{b.listeners}}</em></p>
+                        </div>    
+                    <a href="{{b.url}}" class="btn btn-success">Go to {{b.name}} profile.</a>
+                  </div><br><br>
+          </div> 
+      </div>
+    </div>
+</div>    -->

@@ -1,0 +1,78 @@
+.header{
+    color:white;
+    margin-top:100px;
+}
+
+.cards{
+width:1000px;
+height:200px;
+background-color: white;
+color:black;
+padding:20px;
+}
+
+.box{
+    width:1000px;
+    height:280px;
+    padding:20px;
+    background-color: white;
+    color:black;
+}
+
+.is-clipped{
+    margin-left:20px;
+}
+
+.has-text-success{
+    color:crimson;
+}
+
+.has-addons{
+    line-height: 40px;
+}
+
+.is-dark{
+    padding:3px 5px;;
+    background-color: black;
+    color:white;
+    margin-top:0;
+    margin-bottom: 3px;
+}
+
+.is-info{
+    padding:3px 5px;
+    background-color:crimson;
+    color:white;
+}
+
+.is-light{
+    padding:3px 5px;
+    background-color:crimson;
+    color:white;
+}
+
+.image{
+    margin-top:30px;
+}
+
+.has-text-centered{
+    color:white;
+    text-align:center;
+}
+
+.list{
+    float:right;
+    width:15%;
+}
+
+.rank{
+    float:right;
+    width:15%;
+}
+
+.panel-block{
+    padding:15px;
+    border:2px solid grey;
+    float:left;
+    width:90%;
+}
